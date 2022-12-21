@@ -77,7 +77,6 @@ end
 gem 'sorcery'
 gem 'pry-byebug'
 gem 'rails-i18n'
-gem 'draper', '3.1.0'
 gem 'faker'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"

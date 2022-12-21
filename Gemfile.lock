@@ -283,7 +283,7 @@ DEPENDENCIES
   capybara
   carrierwave (~> 2.0)
   debug
-  draper (= 3.1.0)
+  draper
   faker
   importmap-rails
   jbuilder

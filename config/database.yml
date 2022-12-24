@@ -50,7 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: connectapp_production
-  username: connectapp
+  database: clc0p74nu008pbequ1v3z5asd
+  username: clc0p74nu008nbequefgj38g1
   password: <%= ENV["CONNECTAPP_DATABASE_PASSWORD"] %>
   url: <%= ENV['DATABASE_URL'] %>

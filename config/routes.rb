@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   root to: 'home#top'
   resources :users, only: %i[new create]
-  resources :boards
+  resources :boards, only: %i[index new create show ]
   #get 'home/index'
 end

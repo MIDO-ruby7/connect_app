@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password])
     if @user
-      redirect_to boards_path
+      redirect_to current_user_top_path
     else
       render :new
     end

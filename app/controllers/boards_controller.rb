@@ -21,6 +21,26 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
   end
 
+  def edit
+    @board = Board.find(params[:id])
+  end
+
+  def update
+    @board = Board.find(params[:id])
+    if @board.update(board_params)
+      redirect_to @board, success: t('defaults.message.updated', item: Board.model_name.human)
+    else
+      flash.now['danger'] = t('defaults.message.not_updated', item: Board.model_name.human)
+      render :edit
+    end
+  end
+
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy!
+    redirect_to boards_path, success: t('defaults.message.deleted', item: @board.model_name.human)
+  end
+
   private
 
   def board_params
